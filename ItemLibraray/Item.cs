@@ -3,6 +3,11 @@
     public class Item
     {
         /// <summary>
+        /// The Unic Identification for the Model
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
         /// The Items Name.
         /// </summary>
         public string Name { get; set; }
