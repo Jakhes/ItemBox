@@ -66,6 +66,7 @@
             // 
             NameTextBox.BackColor = Color.FromArgb(64, 64, 64);
             NameTextBox.BorderStyle = BorderStyle.FixedSingle;
+            NameTextBox.ForeColor = Color.LightYellow;
             NameTextBox.Location = new Point(75, 138);
             NameTextBox.Name = "NameTextBox";
             NameTextBox.PlaceholderText = "Item Name";
@@ -153,7 +154,7 @@
             AutoScaleDimensions = new SizeF(16F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(1829, 930);
+            ClientSize = new Size(409, 727);
             Controls.Add(LoreLabel);
             Controls.Add(ValueLabel);
             Controls.Add(DescriptionLabel);
