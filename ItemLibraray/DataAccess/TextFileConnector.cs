@@ -10,14 +10,14 @@ namespace ItemLibraray.DataAccess
 {
     public class TextFileConnector : IDataConnection
     {
-        private const string _ItemsFile = "ItemModels.csv";
+        
 
         // TODO - Implement the actual connection to the Textfile
         public void Create_Item(ItemModel p_Model)
         {
             // load TExtfile
             // convert to List<ItemModel>
-            List<ItemModel> items = _ItemsFile.fullFilePath().LoadFile().ConvertToItemModels();
+            List<ItemModel> items = GlobalConfig.ItemsFile.fullFilePath().LoadFile().ConvertToItemModels();
 
             // find max ID
             int currentId = 1;
@@ -33,7 +33,7 @@ namespace ItemLibraray.DataAccess
 
             // convert items to list<string>
             // save the list<string> to text file
-            items.SaveToItemFile(_ItemsFile);
+            items.SaveToItemFile();
         }
     }
 }

@@ -8,6 +8,7 @@ namespace ItemLibraray
 {
     public static class GlobalConfig
     {
+        public const string ItemsFile = "ItemModels.csv";
         public static IDataConnection Connection { get; private set; }
 
         public static void Init_Connections(DatabaseType db)

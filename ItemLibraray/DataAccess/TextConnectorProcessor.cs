@@ -41,7 +41,7 @@ namespace ItemLibraray.DataAccess.TextHelpers
             return output;
         }
 
-        public static void SaveToItemFile(this List<ItemModel> p_Models, string p_FileName)
+        public static void SaveToItemFile(this List<ItemModel> p_Models)
         {
             List<string> lines = new List<string>();
 
@@ -50,7 +50,7 @@ namespace ItemLibraray.DataAccess.TextHelpers
                 lines.Add($"{ item.ID }, { item.Name }, { item.Description }, { item.Value }, { item.Lore }");
             }
 
-            File.WriteAllLines(p_FileName.fullFilePath(), lines);
+            File.WriteAllLines(GlobalConfig.ItemsFile.fullFilePath(), lines);
         }
     }
 }
