@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ItemLibraray
+namespace ItemLibraray.Models
 {
-    internal class System
+    internal class SystemModel
     {
         /// <summary>
         /// The System's name.
@@ -16,7 +16,7 @@ namespace ItemLibraray
         /// <summary>
         /// Represents a List of all Items in a cohesive System.
         /// </summary>
-        public List<Item> ItemCodex { get; set; } = new List<Item>();
+        public List<ItemModel> ItemCodex { get; set; } = new List<ItemModel>();
 
     }
 }

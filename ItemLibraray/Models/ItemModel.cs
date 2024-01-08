@@ -1,6 +1,6 @@
-﻿namespace ItemLibraray
+﻿namespace ItemLibraray.Models
 {
-    public class Item
+    public class ItemModel
     {
         /// <summary>
         /// The Unic Identification for the Model
@@ -27,5 +27,17 @@
         /// Represents the Lore that might be hidden around the Item.
         /// </summary>
         public string Lore { get; set; }
+
+        public ItemModel(string p_Name, string p_Description, string p_Value, string p_Lore)
+        {
+            Name = p_Name;
+            Description = p_Description;
+
+            int value_Number = 0;
+            int.TryParse(p_Value, out value_Number);
+            Value = value_Number;
+
+            Lore = p_Lore;
+        }
     }
 }
