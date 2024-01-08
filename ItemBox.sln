@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemLibraray", "ItemLibrara
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemBoxUI", "ItemBoxUI\ItemBoxUI.csproj", "{C47C4BE6-F681-40AB-B606-86A792484EBF}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ItemData", "ItemData\ItemData.sqlproj", "{57083202-BF00-4C15-8CC3-10395DF438A3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +21,6 @@ Global
 		{C47C4BE6-F681-40AB-B606-86A792484EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C47C4BE6-F681-40AB-B606-86A792484EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C47C4BE6-F681-40AB-B606-86A792484EBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57083202-BF00-4C15-8CC3-10395DF438A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
