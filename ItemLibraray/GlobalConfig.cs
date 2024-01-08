@@ -3,28 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ItemLibraray.DataAccess;
 namespace ItemLibraray
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
 
-        public static void Init_Connections(bool database, bool textFile)
+        public static void Init_Connections(DatabaseType db)
         {
-            if (database)
+
+            if (db == DatabaseType.Sql)
             {
                 // TODO - Create Database Connection
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
 
-            if (textFile)
+            if (db == DatabaseType.Text)
             {
                 // TODO - Create Textfile Connection
                 TextFileConnector text = new TextFileConnector();
-                Connections.Add(text);
+                Connection = text;
             }
+        }
+
+        public static string CnnString(string name)
+        {
+            return System.Configuration.ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
