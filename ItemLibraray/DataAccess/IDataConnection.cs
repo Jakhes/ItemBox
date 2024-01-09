@@ -10,5 +10,6 @@ namespace ItemLibraray.DataAccess
     public interface IDataConnection
     {
         void Create_Item(ItemModel model);
+        List<ItemModel> GetItems_ById(int p_SystemId);
     }
 }

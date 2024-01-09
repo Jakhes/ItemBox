@@ -35,5 +35,10 @@ namespace ItemLibraray.DataAccess
             // save the list<string> to text file
             items.SaveToItemFile();
         }
+
+        public List<ItemModel> GetItems_ById(int p_SystemId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

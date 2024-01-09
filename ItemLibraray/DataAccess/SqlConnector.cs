@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
@@ -27,6 +28,21 @@ namespace ItemLibraray.DataAccess
 
                 model.ID = p.Get<int>("@id");
             }
+        }
+
+        public List<ItemModel> GetItems_ById(int p_SystemId)
+        {
+            List<ItemModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Items")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@Id", p_SystemId);
+
+                output = connection.Query<ItemModel>("dbo.spItems_GetById", p, commandType: CommandType.StoredProcedure).ToList();
+            }
+
+            return output;
         }
     }
 }
