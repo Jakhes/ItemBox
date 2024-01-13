@@ -25,7 +25,7 @@ namespace ItemBoxUI
 
         private void LoadItemModels()
         {
-            items = GlobalConfig.Connection.GetItems_ById(model.ID);
+            items = GlobalConfig.Connection.GetItems_BySystemId(model.ID);
         }
 
         private void HookUpItemList()

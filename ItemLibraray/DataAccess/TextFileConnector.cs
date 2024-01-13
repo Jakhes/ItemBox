@@ -36,7 +36,7 @@ namespace ItemLibraray.DataAccess
             items.SaveToItemFile();
         }
 
-        public List<ItemModel> GetItems_ById(int p_SystemId)
+        public List<ItemModel> GetItems_BySystemId(int p_SystemId)
         {
             throw new NotImplementedException();
         }
