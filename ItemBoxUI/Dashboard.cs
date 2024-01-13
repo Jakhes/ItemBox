@@ -1,4 +1,5 @@
-﻿using ItemLibraray.Models;
+﻿using ItemLibraray;
+using ItemLibraray.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,6 @@ namespace ItemBoxUI
         {
             InitializeComponent();
 
-            systems.Add(new SystemModel("1", "Greate"));
-
             LoadSystems();
 
             HookUpDropdown();
@@ -31,13 +30,13 @@ namespace ItemBoxUI
         {
             bindingSource.DataSource = systems;
             SystemsCombobox.DataSource = bindingSource;
-            SystemsCombobox.DisplayMember = "Name";
+            SystemsCombobox.DisplayMember = "SystemName";
         }
 
         private void LoadSystems()
         {
             // Get saved SystemModels from Database
-            // Update bindingsource
+            systems = GlobalConfig.Connection.GetAllSystems();
         }
 
         private void CreateSystemButton_Click(object sender, EventArgs e)

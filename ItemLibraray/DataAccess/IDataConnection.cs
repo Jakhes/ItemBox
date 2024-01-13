@@ -11,5 +11,8 @@ namespace ItemLibraray.DataAccess
     {
         void Create_Item(ItemModel model);
         List<ItemModel> GetItems_BySystemId(int p_SystemId);
+
+        void Create_System(SystemModel model);
+        List<SystemModel> GetAllSystems();
     }
 }

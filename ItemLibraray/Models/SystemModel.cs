@@ -16,27 +16,27 @@ namespace ItemLibraray.Models
         /// <summary>
         /// The System's name.
         /// </summary>
-        public string Name { get; set; }
+        public string SystemName { get; set; }
 
         /// <summary>
         /// Represents a List of all Items in a cohesive System.
         /// </summary>
-        public List<ItemModel> ItemCodex { get; set; } = new List<ItemModel>();
+        
 
         public SystemModel()
         {
             ID = 0;
-            Name = "";
-            ItemCodex = new List<ItemModel>();
+            SystemName = "";
         }
         public SystemModel(string p_Id, string p_Name)
         {
             int idValue = 0;
             int.TryParse(p_Id, out idValue);
             ID = idValue;
-            Name = p_Name;
-            ItemCodex = new List<ItemModel>();
+            SystemName = p_Name;
         }
+
+        
 
     }
 }

@@ -16,7 +16,7 @@ namespace ItemBoxUI
             this.model = systemModel;
 
             // Update System Name Label
-            SystemNameLabel.Text = model.Name;
+            SystemNameLabel.Text = model.SystemName;
 
             LoadItemModels();
 
