@@ -15,9 +15,15 @@ namespace ItemBoxUI
 {
     public partial class CreateItemUI : Form
     {
-        public CreateItemUI()
+        int SystemRefId = 0;
+        IItemRequester callerForm;
+
+        public CreateItemUI(IItemRequester p_Caller, int p_SystemRefId)
         {
             InitializeComponent();
+
+            callerForm = p_Caller;
+            SystemRefId = p_SystemRefId;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,14 +39,14 @@ namespace ItemBoxUI
                     NameTextBox.Text,
                     DescriptionRichText.Text,
                     ValueTextBox.Text,
-                    LoreRichText.Text);
+                    LoreRichText.Text,
+                    SystemRefId.ToString());
 
                 GlobalConfig.Connection.Create_Item(model);
 
-                NameTextBox.Text = "";
-                DescriptionRichText.Text = "";
-                ValueTextBox.Text = "0";
-                LoreRichText.Text = "";
+                callerForm.ItemComplete(model);
+
+                this.Close();
             }
             else
             {

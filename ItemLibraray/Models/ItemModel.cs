@@ -28,7 +28,21 @@
         /// </summary>
         public string Lore { get; set; }
 
-        public ItemModel(string p_Name, string p_Description, string p_Value, string p_Lore)
+        /// <summary>
+        /// References the id of the System Model that this Item was created in.
+        /// </summary>
+        public int SystemRefId { get; set; }
+
+        public ItemModel() 
+        { 
+            ID = 0;
+            Name = string.Empty;
+            Description = string.Empty;
+            Value = 0;
+            Lore = string.Empty;
+            SystemRefId = 0;
+        }
+        public ItemModel(string p_Name, string p_Description, string p_Value, string p_Lore, string p_SystemRefId)
         {
             Name = p_Name;
             Description = p_Description;
@@ -38,6 +52,10 @@
             Value = value_Number;
 
             Lore = p_Lore;
+
+            int ref_Id_Number = 0;
+            int.TryParse(p_SystemRefId, out ref_Id_Number);
+            SystemRefId = ref_Id_Number;
         }
     }
 }

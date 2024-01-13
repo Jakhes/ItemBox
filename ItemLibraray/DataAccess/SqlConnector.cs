@@ -22,6 +22,7 @@ namespace ItemLibraray.DataAccess
                 p.Add("@Description", model.Description);
                 p.Add("@Value", model.Value);
                 p.Add("@Lore", model.Lore);
+                p.Add("@SysId", model.SystemRefId);
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spItems_Insert", p,commandType: CommandType.StoredProcedure);

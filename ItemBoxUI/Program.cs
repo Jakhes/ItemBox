@@ -1,3 +1,5 @@
+using ItemLibraray.Models;
+
 namespace ItemBoxUI
 {
     internal static class Program
@@ -13,9 +15,9 @@ namespace ItemBoxUI
             ApplicationConfiguration.Initialize();
 
             // Init the database Connectors
-            ItemLibraray.GlobalConfig.Init_Connections(ItemLibraray.DatabaseType.Text);
+            ItemLibraray.GlobalConfig.Init_Connections(ItemLibraray.DatabaseType.Sql);
 
-            Application.Run(new CreateItemUI());
+            Application.Run(new Dashboard());
         }
     }
 }

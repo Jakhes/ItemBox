@@ -33,7 +33,7 @@ namespace ItemLibraray.DataAccess.TextHelpers
             {
                 string[] cols = line.Split(',');
 
-                ItemModel p = new ItemModel(cols[1], cols[2], cols[3], cols[4]);
+                ItemModel p = new ItemModel(cols[1], cols[2], cols[3], cols[4], cols[5]);
                 p.ID = int.Parse(cols[0]);
                 output.Add(p);
             }
@@ -47,7 +47,7 @@ namespace ItemLibraray.DataAccess.TextHelpers
 
             foreach (ItemModel item in p_Models)
             {
-                lines.Add($"{ item.ID }, { item.Name }, { item.Description }, { item.Value }, { item.Lore }");
+                lines.Add($"{ item.ID }, { item.Name }, { item.Description }, { item.Value }, { item.Lore }, { item.SystemRefId }");
             }
 
             File.WriteAllLines(GlobalConfig.ItemsFile.fullFilePath(), lines);

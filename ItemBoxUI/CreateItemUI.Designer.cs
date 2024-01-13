@@ -48,7 +48,7 @@
             HeaderLabel.Location = new Point(91, 41);
             HeaderLabel.Name = "HeaderLabel";
             HeaderLabel.Size = new Size(223, 38);
-            HeaderLabel.TabIndex = 1;
+            HeaderLabel.TabIndex = 5;
             HeaderLabel.Text = "Create Item:";
             // 
             // NameLabel
@@ -58,20 +58,20 @@
             NameLabel.Location = new Point(75, 104);
             NameLabel.Name = "NameLabel";
             NameLabel.Size = new Size(94, 31);
-            NameLabel.TabIndex = 2;
+            NameLabel.TabIndex = 6;
             NameLabel.Text = "Name:";
             NameLabel.Click += label1_Click;
             // 
             // NameTextBox
             // 
-            NameTextBox.BackColor = Color.FromArgb(64, 64, 64);
+            NameTextBox.BackColor = Color.FromArgb(61, 68, 78);
             NameTextBox.BorderStyle = BorderStyle.FixedSingle;
             NameTextBox.ForeColor = Color.LightYellow;
             NameTextBox.Location = new Point(75, 138);
             NameTextBox.Name = "NameTextBox";
             NameTextBox.PlaceholderText = "Item Name";
             NameTextBox.Size = new Size(261, 38);
-            NameTextBox.TabIndex = 3;
+            NameTextBox.TabIndex = 0;
             // 
             // CreateButton
             // 
@@ -88,36 +88,36 @@
             // 
             // DescriptionRichText
             // 
-            DescriptionRichText.BackColor = Color.FromArgb(64, 64, 64);
+            DescriptionRichText.BackColor = Color.FromArgb(61, 68, 78);
             DescriptionRichText.BorderStyle = BorderStyle.FixedSingle;
             DescriptionRichText.ForeColor = Color.LightYellow;
             DescriptionRichText.Location = new Point(75, 226);
             DescriptionRichText.Name = "DescriptionRichText";
             DescriptionRichText.Size = new Size(261, 89);
-            DescriptionRichText.TabIndex = 5;
+            DescriptionRichText.TabIndex = 1;
             DescriptionRichText.Text = "";
             // 
             // LoreRichText
             // 
-            LoreRichText.BackColor = Color.FromArgb(64, 64, 64);
+            LoreRichText.BackColor = Color.FromArgb(61, 68, 78);
             LoreRichText.BorderStyle = BorderStyle.FixedSingle;
             LoreRichText.ForeColor = Color.LightYellow;
             LoreRichText.Location = new Point(75, 470);
             LoreRichText.Name = "LoreRichText";
             LoreRichText.Size = new Size(261, 96);
-            LoreRichText.TabIndex = 6;
+            LoreRichText.TabIndex = 3;
             LoreRichText.Text = "";
             // 
             // ValueTextBox
             // 
-            ValueTextBox.BackColor = Color.FromArgb(64, 64, 64);
+            ValueTextBox.BackColor = Color.FromArgb(61, 68, 78);
             ValueTextBox.BorderStyle = BorderStyle.FixedSingle;
             ValueTextBox.ForeColor = Color.LightYellow;
             ValueTextBox.Location = new Point(75, 375);
             ValueTextBox.Name = "ValueTextBox";
             ValueTextBox.PlaceholderText = "1000";
             ValueTextBox.Size = new Size(261, 38);
-            ValueTextBox.TabIndex = 7;
+            ValueTextBox.TabIndex = 2;
             // 
             // DescriptionLabel
             // 
@@ -126,7 +126,7 @@
             DescriptionLabel.Location = new Point(75, 192);
             DescriptionLabel.Name = "DescriptionLabel";
             DescriptionLabel.Size = new Size(161, 31);
-            DescriptionLabel.TabIndex = 8;
+            DescriptionLabel.TabIndex = 7;
             DescriptionLabel.Text = "Description:";
             // 
             // ValueLabel
@@ -136,7 +136,7 @@
             ValueLabel.Location = new Point(75, 341);
             ValueLabel.Name = "ValueLabel";
             ValueLabel.Size = new Size(91, 31);
-            ValueLabel.TabIndex = 9;
+            ValueLabel.TabIndex = 8;
             ValueLabel.Text = "Value:";
             // 
             // LoreLabel
@@ -146,14 +146,14 @@
             LoreLabel.Location = new Point(75, 436);
             LoreLabel.Name = "LoreLabel";
             LoreLabel.Size = new Size(77, 31);
-            LoreLabel.TabIndex = 10;
+            LoreLabel.TabIndex = 9;
             LoreLabel.Text = "Lore:";
             // 
             // CreateItemUI
             // 
             AutoScaleDimensions = new SizeF(16F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(64, 64, 64);
+            BackColor = Color.FromArgb(40, 48, 59);
             ClientSize = new Size(409, 727);
             Controls.Add(LoreLabel);
             Controls.Add(ValueLabel);

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             SystemNameLabel = new Label();
-            listBox1 = new ListBox();
+            ItemListBox = new ListBox();
             AddItemButton = new Button();
             SuspendLayout();
             // 
@@ -45,20 +45,20 @@
             SystemNameLabel.Text = "<System Name>";
             SystemNameLabel.Click += label1_Click;
             // 
-            // listBox1
+            // ItemListBox
             // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.BackColor = Color.DimGray;
-            listBox1.BorderStyle = BorderStyle.None;
-            listBox1.Font = new Font("Georgia", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox1.ForeColor = SystemColors.Info;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(134, 86);
-            listBox1.Margin = new Padding(15);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(646, 225);
-            listBox1.TabIndex = 1;
+            ItemListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ItemListBox.BackColor = Color.FromArgb(61, 68, 78);
+            ItemListBox.BorderStyle = BorderStyle.None;
+            ItemListBox.Font = new Font("Georgia", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ItemListBox.ForeColor = SystemColors.Info;
+            ItemListBox.FormattingEnabled = true;
+            ItemListBox.ItemHeight = 25;
+            ItemListBox.Location = new Point(134, 86);
+            ItemListBox.Margin = new Padding(15);
+            ItemListBox.Name = "ItemListBox";
+            ItemListBox.Size = new Size(646, 225);
+            ItemListBox.TabIndex = 1;
             // 
             // AddItemButton
             // 
@@ -72,19 +72,21 @@
             AddItemButton.TabIndex = 5;
             AddItemButton.Text = "Add New";
             AddItemButton.UseVisualStyleBackColor = true;
+            AddItemButton.Click += AddItemButton_Click;
             // 
             // SystemView
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(64, 64, 64);
+            BackColor = Color.FromArgb(40, 48, 59);
             ClientSize = new Size(914, 450);
             Controls.Add(AddItemButton);
-            Controls.Add(listBox1);
+            Controls.Add(ItemListBox);
             Controls.Add(SystemNameLabel);
             Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "SystemView";
             Text = "ItemBox";
+            Load += SystemView_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -92,7 +94,7 @@
         #endregion
 
         private Label SystemNameLabel;
-        private ListBox listBox1;
+        private ListBox ItemListBox;
         private Button AddItemButton;
     }
 }
